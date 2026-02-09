@@ -1,0 +1,293 @@
+<<<<<<< HEAD
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100svh;
+  background-image: url("../images/page_2/background2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page {
+  min-height: 100svh;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+.upper_half {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.main_text {
+  font-family: 'Baloo 2';
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.laying_down {
+  width: 400px;
+}
+
+.lower_half {
+  /* background-color: white; */
+  display: grid;
+
+  padding-left: 22%;
+  padding-right: 22%;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  column-gap: 100px;
+  justify-content: center;
+}
+
+.button_image {
+  width: 165px;
+}
+
+.choice_button {
+  background-color: #F6C1B5;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.4s,
+    background-color 0.4s,
+    box-shadow 0.4s;
+}
+
+.choice_button:hover {
+  transform: scale(1.1);
+  background-color: #F2ADA0;
+  box-shadow: 0px 0px 50px rgb(255, 0, 60);
+}
+
+.choice_button:active {
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-size: cover; /* mai ok decât 100% 100% */
+    min-height: 100svh;
+  }
+
+  .upper_half{
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .laying_down{
+    width: 80vw;
+  }
+
+  .main_text{
+    font-size: 22px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .lower_half{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 16px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    column-gap: 0;
+    justify-items: center;
+  }
+
+  .choice_button{
+    width: min(320px, 90vw);
+    height: 120px;               /* opțional, arată bine */
+    border-radius: 18px;
+  }
+
+  .button_image{
+    width: 140px;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+=======
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100svh;
+  background-image: url("../images/page_2/background2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+.upper_half {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.main_text {
+  font-family: 'Baloo 2';
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.laying_down {
+  width: 400px;
+}
+
+.lower_half {
+  /* background-color: white; */
+  display: grid;
+
+  padding-left: 22%;
+  padding-right: 22%;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  column-gap: 100px;
+  justify-content: center;
+}
+
+.button_image {
+  width: 165px;
+}
+
+.choice_button {
+  background-color: #F6C1B5;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.4s,
+    background-color 0.4s,
+    box-shadow 0.4s;
+}
+
+.choice_button:hover {
+  transform: scale(1.1);
+  background-color: #F2ADA0;
+  box-shadow: 0px 0px 50px rgb(255, 0, 60);
+}
+
+.choice_button:active {
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-size: cover; /* mai ok decât 100% 100% */
+    min-height: 100svh;
+  }
+
+  .upper_half{
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .laying_down{
+    width: 80vw;
+  }
+
+  .main_text{
+    font-size: 22px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .lower_half{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 16px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    column-gap: 0;
+    justify-items: center;
+  }
+
+  .choice_button{
+    width: min(320px, 90vw);
+    height: 120px;               /* opțional, arată bine */
+    border-radius: 18px;
+  }
+
+  .button_image{
+    width: 140px;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .choice_button {
+    -webkit-tap-highlight-color: transparent;
+  }
+>>>>>>> c698408 (Initial commit - website files)
+}
