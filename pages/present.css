@@ -1,0 +1,190 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url(../images/page_2/background2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.main_text{ 
+  font-family: 'Baloo 2';
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  margin-top: 3vh;
+}
+
+.main_flowers {
+  width: 38vw;
+  margin-top: 5vh;
+}
+
+.letter_wrapper{
+  position: absolute;
+  width: fit-content;
+}
+
+.letter_wrapper .mini_letter{
+  height: calc(15vh * var(--letter-scale, 1.5));
+  width: auto;
+  display: block;
+}
+
+.letter_wrapper .letter_text{
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+
+  width: 78%;
+  text-align: center;
+
+  font-family: 'Baloo 2';
+  font-size: var(--text-size, 2.5vh);
+  line-height: 2;
+  font-weight: 600;
+  color: #5a2a2a;
+
+  margin: 0;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+@keyframes footerFade {
+  from { opacity: 0; }
+  to   { opacity: 0.6; }
+}
+
+.footer {
+  text-align: center;
+  opacity: 0;
+  animation: footerFade 0.8s ease-out forwards;
+
+  position: fixed;
+  bottom: 0px;
+
+  font-family: 'Baloo 2';
+  font-size: 15px;
+  pointer-events: none;
+  color: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+
+.close {
+  position: absolute;
+  margin: 0;
+  font-family: 'Baloo 2';
+  font-size: 25px;
+  right: 1%;
+  top: 2%;
+  border: none;
+  background-color: pink;
+  width: 40px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.close:hover {
+  opacity: 0.7;
+}
+
+.close:active {
+  opacity: 0.5;
+}
+
+.letter1 { left: 10%; top: 15vh; transform: rotate(-15deg); }
+.letter2 { left: 13%; bottom: 18vh; transform: rotate(12deg); }
+.letter3 { top: 20%; right: 23vh; transform: rotate(19deg); }
+.letter4 { bottom: 16%; right: 17vh; transform: rotate(-14deg); }
+
+@media (max-width: 600px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /* Titlul */
+  .main_text{
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 2vh;
+    padding: 0 10px;
+  }
+
+  /* Buchetul */
+  .main_flowers{
+    width: 80vw;
+    margin-top: 25vh;
+  }
+
+  /* Scrisorile mai mici */
+  .letter_wrapper{
+    --letter-scale: 0.75;
+    --text-size: 1.2vh;
+  }
+
+  /* Poziționare ajustată pentru mobil */
+  .letter1{
+    left: 6%;
+    top: 14vh;
+    transform: rotate(-6deg);
+  }
+
+  .letter2{
+    left: 8%;
+    bottom: 11vh;
+    transform: rotate(6deg);
+  }
+
+  .letter3{
+    right: 6%;
+    top: 18vh;
+    transform: rotate(8deg);
+  }
+
+  .letter4{
+    right: 8%;
+    bottom: 9vh;
+    transform: rotate(-6deg);
+  }
+
+  /* Buton close */
+  .close{
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  /* Footer */
+  .footer{
+    font-size: 12px;
+    padding-bottom: 6px;
+  }
+}
